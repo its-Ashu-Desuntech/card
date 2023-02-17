@@ -6,7 +6,7 @@ const CardShow = (props) => {
   <View>
   {
     props.arr.map((item,i)=>{
-       return <Box alignItems="center" px={3} >
+       return <Box alignItems="center" px={3}  key={item.id}>
       <Box maxW="80" rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
       borderColor: "coolGray.600",
       backgroundColor: "gray.700"
@@ -17,7 +17,7 @@ const CardShow = (props) => {
       backgroundColor: "gray.50"
     }} 
 
-     key={item.id}
+    
     >
         <Heading>{item.title}</Heading>
         <Box>
